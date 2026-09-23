@@ -1,3 +1,4 @@
+import 'package:animal_smile/screens/authentication/get_started.dart';
 import 'package:flutter/material.dart';
 
 class WelcomeThree extends StatelessWidget {
@@ -78,7 +79,14 @@ class WelcomeThree extends StatelessWidget {
                         ),
                         const SizedBox(height: 30),
                         GestureDetector(
-                          onTap: () {},
+                          onTap: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => GetStarted(),
+                              ),
+                            );
+                          },
                           child: Container(
                             width: MediaQuery.of(context).size.width,
                             padding: const EdgeInsets.all(18),
