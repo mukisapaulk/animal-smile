@@ -1,3 +1,4 @@
+import 'package:animal_smile/screens/welcome_two.dart';
 import 'package:flutter/material.dart';
 
 class WelcomeOne extends StatelessWidget {
@@ -90,7 +91,14 @@ class WelcomeOne extends StatelessWidget {
                         ),
                       ),
                       GestureDetector(
-                        onTap: () {},
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => WelcomeTwo(),
+                            ),
+                          );
+                        },
                         child: Container(
                           width: 56,
                           height: 56,

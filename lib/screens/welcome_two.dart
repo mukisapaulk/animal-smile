@@ -1,3 +1,4 @@
+import 'package:animal_smile/screens/welcome_three.dart';
 import 'package:flutter/material.dart';
 
 class WelcomeTwo extends StatelessWidget {
@@ -24,14 +25,6 @@ class WelcomeTwo extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Container(
-                  decoration: BoxDecoration(
-                    color: Colors.black,
-                    borderRadius: BorderRadius.circular(8),
-                  ),
-                  width: 30,
-                  height: 8,
-                ),
                 const SizedBox(width: 8),
                 Container(
                   decoration: BoxDecoration(
@@ -39,6 +32,14 @@ class WelcomeTwo extends StatelessWidget {
                     borderRadius: BorderRadius.circular(50),
                   ),
                   width: 8,
+                  height: 8,
+                ),
+                Container(
+                  decoration: BoxDecoration(
+                    color: Colors.black,
+                    borderRadius: BorderRadius.circular(8),
+                  ),
+                  width: 30,
                   height: 8,
                 ),
                 const SizedBox(width: 8),
@@ -90,7 +91,14 @@ class WelcomeTwo extends StatelessWidget {
                         ),
                       ),
                       GestureDetector(
-                        onTap: () {},
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => WelcomeThree(),
+                            ),
+                          );
+                        },
                         child: Container(
                           width: 56,
                           height: 56,

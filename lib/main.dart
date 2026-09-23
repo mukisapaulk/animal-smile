@@ -1,5 +1,5 @@
-// import 'package:animal_smile/screens/welcome_one.dart';
-import 'package:animal_smile/screens/welcome_two.dart';
+import 'package:animal_smile/screens/welcome_one.dart';
+// import 'package:animal_smile/screens/welcome_two.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -11,6 +11,6 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(debugShowCheckedModeBanner: false, home: WelcomeTwo());
+    return MaterialApp(debugShowCheckedModeBanner: false, home: WelcomeOne());
   }
 }
