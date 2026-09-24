@@ -1,3 +1,4 @@
+import 'package:animal_smile/screens/authentication/login_screen.dart';
 import 'package:flutter/material.dart';
 
 class GetStarted extends StatelessWidget {
@@ -89,7 +90,14 @@ class GetStarted extends StatelessWidget {
                     Expanded(
                       flex: 1,
                       child: GestureDetector(
-                        onTap: () {},
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => LoginScreen(),
+                            ),
+                          );
+                        },
                         child: Container(
                           decoration: BoxDecoration(
                             color: primaryColor,
