@@ -1,3 +1,4 @@
+import 'package:animal_smile/farmer_navigator_screen.dart';
 import 'package:animal_smile/screens/authentication/forgot_password_screen.dart';
 import 'package:animal_smile/screens/authentication/sign_up_screen.dart';
 import 'package:animal_smile/utils/big_title_text.dart';
@@ -62,7 +63,16 @@ class _LoginScreenState extends State<LoginScreen> {
             ),
             const SizedBox(height: 50),
             //login buttton
-            MainButton(onTap: () {}, text: 'Login'),
+            MainButton(
+              onTap: () {
+                Navigator.of(context).push(
+                  MaterialPageRoute(
+                    builder: (context) => FarmerNavigatorScreen(),
+                  ),
+                );
+              },
+              text: 'Login',
+            ),
             const SizedBox(height: 10),
             Text(
               'or continue with',
