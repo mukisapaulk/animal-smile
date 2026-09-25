@@ -1,8 +1,8 @@
-import 'package:animal_smile/screens/welcome_three.dart';
+import 'package:animal_smile/screens/welcoming/welcome_two.dart';
 import 'package:flutter/material.dart';
 
-class WelcomeTwo extends StatelessWidget {
-  WelcomeTwo({super.key});
+class WelcomeOne extends StatelessWidget {
+  WelcomeOne({super.key});
   // testing our colors
   Color primaryColor = const Color(0xFF043F2E);
 
@@ -17,7 +17,7 @@ class WelcomeTwo extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Image.asset(
-              './lib/images/welcometwo.png',
+              './lib/images/welcomeone.png',
               height: 400,
               fit: BoxFit.cover,
             ),
@@ -25,6 +25,14 @@ class WelcomeTwo extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
+                Container(
+                  decoration: BoxDecoration(
+                    color: Colors.black,
+                    borderRadius: BorderRadius.circular(8),
+                  ),
+                  width: 30,
+                  height: 8,
+                ),
                 const SizedBox(width: 8),
                 Container(
                   decoration: BoxDecoration(
@@ -32,14 +40,6 @@ class WelcomeTwo extends StatelessWidget {
                     borderRadius: BorderRadius.circular(50),
                   ),
                   width: 8,
-                  height: 8,
-                ),
-                Container(
-                  decoration: BoxDecoration(
-                    color: Colors.black,
-                    borderRadius: BorderRadius.circular(8),
-                  ),
-                  width: 30,
                   height: 8,
                 ),
                 const SizedBox(width: 8),
@@ -59,7 +59,7 @@ class WelcomeTwo extends StatelessWidget {
               child: Column(
                 children: [
                   Text(
-                    'Artificial Insemination Made Easy',
+                    '24/7 Veterinary support',
                     style: TextStyle(
                       fontSize: 36,
                       fontWeight: FontWeight(800),
@@ -69,7 +69,7 @@ class WelcomeTwo extends StatelessWidget {
                   ),
                   const SizedBox(height: 10),
                   Text(
-                    'Book trusted experts and improve livestock productivity.',
+                    'Diagnose, treat, and monitor your animals anytime, anywhere.',
                     style: TextStyle(
                       fontSize: 14,
                       fontWeight: FontWeight(400),
@@ -95,7 +95,7 @@ class WelcomeTwo extends StatelessWidget {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => WelcomeThree(),
+                              builder: (context) => WelcomeTwo(),
                             ),
                           );
                         },

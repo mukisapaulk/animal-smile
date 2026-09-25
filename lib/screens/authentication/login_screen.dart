@@ -1,4 +1,5 @@
 import 'package:animal_smile/screens/authentication/forgot_password_screen.dart';
+import 'package:animal_smile/screens/authentication/sign_up_screen.dart';
 import 'package:animal_smile/utils/big_title_text.dart';
 import 'package:animal_smile/utils/input_field.dart';
 import 'package:animal_smile/utils/main_button.dart';
@@ -24,7 +25,7 @@ class _LoginScreenState extends State<LoginScreen> {
       backgroundColor: Colors.white,
       appBar: AppBar(
         automaticallyImplyLeading: true,
-        backgroundColor: Colors.transparent,
+        forceMaterialTransparency: true,
         elevation: 0,
       ),
       body: Padding(
@@ -101,7 +102,11 @@ class _LoginScreenState extends State<LoginScreen> {
                   ),
                 ),
                 GestureDetector(
-                  onTap: () {},
+                  onTap: () {
+                    Navigator.of(context).push(
+                      MaterialPageRoute(builder: (context) => SignUpScreen()),
+                    );
+                  },
                   child: Text(
                     'Sign up',
                     style: TextStyle(
