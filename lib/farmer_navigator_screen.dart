@@ -34,10 +34,14 @@ class _FarmerNavigatorScreen extends State<FarmerNavigatorScreen> {
     return Scaffold(
       body: _screens[_selectedScreen],
       bottomNavigationBar: BottomNavigationBar(
+        selectedItemColor: Colors.black,
+        unselectedItemColor: Colors.black,
+        selectedLabelStyle: TextStyle(fontWeight: FontWeight.bold),
+        unselectedLabelStyle: TextStyle(fontWeight: FontWeight(400)),
         elevation: 0,
         currentIndex: _selectedScreen,
         onTap: _navigationButtonBar,
-        items: [
+        items: const [
           BottomNavigationBarItem(
             icon: Icon(Icons.home, color: Colors.black),
             label: 'home',
