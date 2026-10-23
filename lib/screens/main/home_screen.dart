@@ -2,6 +2,7 @@ import 'package:animal_smile/components/hero_container.dart';
 import 'package:animal_smile/components/request_service_floating_button.dart';
 import 'package:animal_smile/components/service_container.dart';
 import 'package:animal_smile/partials/recent_visits_on_home.dart';
+import 'package:animal_smile/screens/search/search_page.dart';
 import 'package:animal_smile/screens/secondary/notification_screen.dart';
 import 'package:flutter/material.dart';
 
@@ -26,6 +27,15 @@ class _HomeScreenState extends State<HomeScreen> {
         automaticallyImplyActions: true,
         actions: [
           IconButton(onPressed: () {}, icon: Icon(Icons.wallet)),
+          IconButton(
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => SearchPage()),
+              );
+            },
+            icon: Icon(Icons.search),
+          ),
           IconButton(
             onPressed: () {
               Navigator.push(
