@@ -1,6 +1,8 @@
 import 'package:animal_smile/components/hero_container.dart';
 import 'package:animal_smile/components/request_service_floating_button.dart';
 import 'package:animal_smile/components/service_container.dart';
+import 'package:animal_smile/partials/recent_visits_on_home.dart';
+import 'package:animal_smile/screens/secondary/notification_screen.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -11,6 +13,7 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
+  //list of the
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -19,11 +22,19 @@ class _HomeScreenState extends State<HomeScreen> {
         elevation: 0,
         forceMaterialTransparency: true,
         automaticallyImplyLeading: false,
-        title: Text('welcome back John Doe', maxLines: 2),
+        title: Text('test home', maxLines: 2),
         automaticallyImplyActions: true,
         actions: [
           IconButton(onPressed: () {}, icon: Icon(Icons.wallet)),
-          IconButton(onPressed: () {}, icon: Icon(Icons.notifications)),
+          IconButton(
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => NotificationScreen()),
+              );
+            },
+            icon: Icon(Icons.notifications),
+          ),
         ],
       ),
       body: Padding(
@@ -77,6 +88,17 @@ class _HomeScreenState extends State<HomeScreen> {
                 GestureDetector(onTap: () {}, child: Text('see all')),
               ],
             ),
+
+            //recent visits
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                Text('Recent visits'),
+                GestureDetector(onTap: () {}, child: Text('see all')),
+              ],
+            ),
+            RecentVisitsOnHome(),
             RequestServiceFloatingButton(),
           ],
         ),

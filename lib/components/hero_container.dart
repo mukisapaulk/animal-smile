@@ -47,6 +47,7 @@ class HeroContainer extends StatelessWidget {
           Expanded(child: Image.asset(heroimg)),
         ],
       ),
+      
     );
   }
 }

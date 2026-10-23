@@ -4,7 +4,7 @@ class ServiceContainer extends StatelessWidget {
   final IconData icon;
   final String title;
   final String subtitle;
-  ServiceContainer({
+  const ServiceContainer({
     super.key,
     required this.icon,
     required this.subtitle,
